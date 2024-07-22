@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WishMessage {
 	@GetMapping("/wish/{name}")
 	public ResponseEntity<String>wishMessage(@PathVariable String name){
+		System.out.println("WishMessage.wishMessage()");
 		return new ResponseEntity<String>("GoodMorning :: "+name,HttpStatus.OK);
 	}
 
